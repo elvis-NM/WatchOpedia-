@@ -21,7 +21,7 @@ const Counter = () => {
   }
 
   return (
-    <div className="col-12 col-md-2 offset-md-s border row text-white">
+    <div className="container col-12 col-md-2 offset-md-s border row text-white">
       <span className="h2 pt-4 m-2 text-white-50">{titleState} Counter</span>
       <button className="btn btn-success m-1" onClick={incrementCounter}>
         +1
