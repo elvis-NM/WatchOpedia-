@@ -3,8 +3,10 @@ import { useState } from "react";
 const Counter = () => {
   const [counterState, setCounterState] = useState(() => {
     //use state repalces complete state object -setstate replaces only object passed
-    return { counter: 10, title: "Fun" };
+    return { counter: 10 };
   });
+
+  const [titleState, setTitleState] = useState("Fun"); // multiple use state
 
   function incrementCounter() {
     setCounterState((prevState) => {
@@ -20,9 +22,7 @@ const Counter = () => {
 
   return (
     <div className="col-12 col-md-2 offset-md-s border row text-white">
-      <span className="h2 pt-4 m-2 text-white-50">
-        {counterState.title} Counter
-      </span>
+      <span className="h2 pt-4 m-2 text-white-50">{titleState} Counter</span>
       <button className="btn btn-success m-1" onClick={incrementCounter}>
         +1
       </button>
